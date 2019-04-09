@@ -3,6 +3,23 @@
 <head>
 <link href="style.css" rel="stylesheet" type="text/css">
 
+<script>
+
+ function openModalWindow()
+ {
+  
+      document.body.classList.add("open-modal-window");
+
+ }
+
+ function closeModalWindow()
+ {
+   document.body.classList.remove("open-modal-window");
+   location.reload();
+ }
+
+</script>
+
 </head>
 
 
@@ -12,7 +29,7 @@
 
       <div class="first-screen-container">
        
-          <button> Click Me! </button>
+          <button id="open-modal"> Click Me! </button>
 
           <img src="point.svg" class="adjust-image point-hand">
 
@@ -20,16 +37,36 @@
 
       <div class="modal-window">
          
-       <input type="image" src="iconfinder_close16_216470.svg"> 
+       <input type="image" src="iconfinder_close16_216470.svg" id="closeModal"> 
         
        <div class="modal-window-container">
         <h1> Hello!</h1>
-        <img src="iconfinder_hand-stop-o_1608369.svg" class="adjust-image">
+        <img src="iconfinder_hand-stop-o_1608369.svg" class="adjust-image wave-hand">
         </div>
 
       </div>
 
     </div>
+
+    <script>
+    
+     const buttonOpenModalWindow = document.querySelector("#open-modal");
+     const closeModal = document.querySelector("#closeModal");
+     const closeModalWindowAutomatic = document.querySelector(".modal-window");
+
+
+     buttonOpenModalWindow.addEventListener("click",openModalWindow);
+     closeModal.addEventListener("click",closeModalWindow);
+
+     closeModalWindowAutomatic.addEventListener("click",e=>
+     {
+         if(!e.target.closest("div").classList.contains("modal-window-container"))
+         {
+          closeModalWindow();
+         }
+     });
+
+    </script>
 
 </body>
 

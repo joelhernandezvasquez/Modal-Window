@@ -1,16 +1,12 @@
 
 
+/* SELECTOR STYLES AND MAIN CLASSES */
 h1
 {
     color:white;
     font-size:3.5rem;
 }
 
-.adjust-image
-{
-    width:120px;
-    margin-top:50px;
-}
 
 button
 {
@@ -27,6 +23,12 @@ input[type="image"]
     padding:20px;
 }
 
+
+.adjust-image
+{
+    width:120px;
+    margin-top:50px;
+}
 
 
 
@@ -71,18 +73,6 @@ input[type="image"]
     transition:opacity 0.5s ease-out;
     
 }
-
-.open-modal-window .modal-window
-{
-    z-index: 2;
-    opacity: 1;
-}
-.open-modal-window .first-screen-container
-{
-    z-index: 1;
-    opacity: 0;
-}
-
 .modal-window-container
 {
    display: flex;
@@ -92,6 +82,19 @@ input[type="image"]
    margin-top:120px;
    border:1px solid red;
 
+}
+
+
+/* ANIMATION */
+.open-modal-window .modal-window
+{
+    z-index: 2;
+    opacity: 1;
+}
+.open-modal-window .first-screen-container
+{
+    z-index: 1;
+    opacity: 0;
 }
 
 .point-hand
